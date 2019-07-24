@@ -7,7 +7,7 @@
 <body>
         <h1>Welcome to ajax</h1>
     <script type="text/javascript">
-        
+     <div id="output"></div>   
     var myOBJ={
         "friends":[
             {"first":"mike","last":"smith"},
@@ -18,8 +18,12 @@
         ]
         
     };
-           
-        console.log(myOBJ);
+    var users = myOBJ.friends;
+        var html = ' ';
+        for(i =0; i<myOBJ.friends.length; i++){
+            html += ' <p> ' + (myOBJ.friends[i].first);
+        }
+        document.getElementById("output").innerHTML = html;
     </script>
     
 </body>
